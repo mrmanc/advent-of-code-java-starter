@@ -1,4 +1,4 @@
-package aoc.day01;
+package aoc.year2025.day01;
 
 import aoc.Day;
 
@@ -12,12 +12,12 @@ public class Day01 extends Day {
 
     @Override
     public String part1(List<String> input) {
-        return input.isEmpty() ? "" : input.get(0);
+        return input.isEmpty() ? "" : input.getFirst();
     }
 
     @Override
     public String part2(List<String> input) {
-        return input.isEmpty() ? "" : input.get(0);
+        return input.isEmpty() ? "" : input.getFirst();
     }
 
 }

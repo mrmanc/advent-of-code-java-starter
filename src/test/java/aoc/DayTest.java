@@ -1,12 +1,13 @@
 package aoc;
 
+import aoc.year2014.day01.FakeDay01;
+import aoc.year2025.day01.Day01;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -35,24 +36,19 @@ class DayTest {
                 "Day 1, Part 2: 456");
     }
 
+    @Test
+    void yearNumberTakenFromPackage() {
+        assertThat(new Day01().year()).isEqualTo(2025);
+    }
+
+    @Test
+    void dayNumberTakenFromPackage() {
+        assertThat(new Day01().dayNumber()).isEqualTo(1);
+    }
+
     @AfterEach
     void tearDown() {
         System.setOut(originalOut);
     }
 
-    private static class FakeDay01 extends Day {
-        public FakeDay01() {
-            super();
-        }
-
-        @Override
-        public String part1(List<String> input) {
-            return "123";
-        }
-
-        @Override
-        public String part2(List<String> input) {
-            return "456";
-        }
-    }
 }

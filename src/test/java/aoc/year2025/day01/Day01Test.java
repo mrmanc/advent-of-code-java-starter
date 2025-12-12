@@ -1,4 +1,4 @@
-package aoc.day01;
+package aoc.year2025.day01;
 
 
 import org.junit.jupiter.api.Test;
@@ -19,7 +19,7 @@ public class Day01Test {
         String result = new Day01().part1(input);
 
         // Then
-        assertThat(result).isEqualTo(input.get(0));
+        assertThat(result).isEqualTo(input.getFirst());
     }
 
     @Test
@@ -31,6 +31,6 @@ public class Day01Test {
         String result = new Day01().part2(input);
 
         // Then
-        assertThat(result).isEqualTo(input.get(0));
+        assertThat(result).isEqualTo(input.getFirst());
     }
 }
